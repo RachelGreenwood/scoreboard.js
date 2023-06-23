@@ -18,4 +18,17 @@ function updateScore(scoreboard, player, newScore) {
   return scoreboard;
 }
 
-console.log(updateScore({ 'Freyja Ćirić': 12771008 }, 'Freyja Ćirić', 73));
+function applyMondayBonus(scoreboard) {
+  for (player in scoreboard) {
+    scoreboard[player] = scoreboard[player] + 100;
+  }
+  return scoreboard;
+}
+
+const scoreBoard = {
+  'Dave Thomas': 44,
+  'Freyja Ćirić': 539,
+  'José Valim': 265,
+};
+
+console.log(applyMondayBonus(scoreBoard));
