@@ -31,4 +31,14 @@ const scoreBoard = {
   'José Valim': 265,
 };
 
-console.log(applyMondayBonus(scoreBoard));
+function normalizeScore(obj) {
+  return normalize(obj.score);
+}
+
+function normalize(score) {
+  return 2 * score + 10;
+}
+
+const params = { score: 400, normalizeFunction: normalize };
+
+console.log(normalizeScore(params));
