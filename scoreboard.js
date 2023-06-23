@@ -13,4 +13,11 @@ function addPlayer(scoreboard, player, score) {
   //return createScoreBoard({player, score})
 }
 
-console.log(addPlayer({ 'Dave Thomas': 0 }, 'José Valim', 486373))
+function removePlayer(scoreboard, player) {
+  if (scoreboard.hasOwnProperty(player)) {
+    delete scoreboard[player];
+  }
+  return scoreboard;
+}
+
+console.log(removePlayer({ 'Dave Thomas': 0 }, 'Rose Fanaras'))
