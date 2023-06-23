@@ -13,11 +13,9 @@ function addPlayer(scoreboard, player, score) {
   //return createScoreBoard({player, score})
 }
 
-function removePlayer(scoreboard, player) {
-  if (scoreboard.hasOwnProperty(player)) {
-    delete scoreboard[player];
-  }
+function updateScore(scoreboard, player, newScore) {
+  scoreboard[player] = scoreboard[player] + newScore;
   return scoreboard;
 }
 
-console.log(removePlayer({ 'Dave Thomas': 0 }, 'Rose Fanaras'))
+console.log(updateScore({ 'Freyja Ćirić': 12771008 }, 'Freyja Ćirić', 73));
